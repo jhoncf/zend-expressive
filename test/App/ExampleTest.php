@@ -24,11 +24,8 @@ class HomePageActionTest extends TestCase {
 		$customRequest = new CustomRequest($request);
 
 		$postData = [
-			'userName' => 'marcos@test',
-			'password' => 'Dcide123@',
-			'SessionData' => [
-				'application' => 'dusers_admin'
-			]
+			'userName' => 'teste@test',
+			'password' => 'teste2@'
 		];
 		$customRequest->setContent($postData);
 
@@ -40,9 +37,7 @@ class HomePageActionTest extends TestCase {
 		$responseArray = json_decode($responseJson, true);
 
 		$this->assertArrayHasKey('userName', $responseArray[0]);
-		$this->assertArrayHasKey('password', $responseArray[0]);
 		$this->assertArrayHasKey('SessionData', $responseArray[0]);
-		$this->assertArrayHasKey('application', $responseArray[0]['SessionData']);
 
 		$this->assertEquals($postData, $responseArray[0]);
 		$this->assertJson($responseJson);

@@ -1,9 +1,8 @@
 {
-  "name": "DUsers - API",
+  "name": "API",
   "version": "0.1.0",
-  "description": "Documentação para utilização da API do DUsers",
+  "description": "Documentação para utilização da API",
   "apidoc": {
-    "title": "DUsers - API",
-    "url" : "http://dcideusers-api.fmb.intranet/"
+    "title": "API"
   }
 }

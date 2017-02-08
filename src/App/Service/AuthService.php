@@ -1,8 +1,8 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Dcide
- * Date: 13/05/2016
+ * User: jhonatas
+ * Date: 13/02/2017
  * Time: 11:03
  */
 
@@ -14,7 +14,6 @@ use Interop\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
-use Exceptions\DUsersExceptions;
 
 class AuthService {
 
@@ -65,26 +64,13 @@ class AuthService {
 
 			if ($resource == 'Login') {
 				if ((!isset($param['userName']) && empty($param['userName'])) && (!isset($param['email']) && empty($param['email']))) {
-					throw new DUsersExceptions('Campo userName/email obrigatório');
+					throw new \Exception('Campo userName/email obrigatório');
 				}
 
 				if (!isset($param['password']) && empty($param['password'])) {
-					throw new DUsersExceptions('Campo password obrigatório');
+					throw new \Exception('Campo password obrigatório');
 				}
 
-				if (!isset($param["SessionData"]['application']) && empty($param["SessionData"]['application'])) {
-					throw new DUsersExceptions('Campo application precisa ser definido');
-				}
-
-			}
-
-			$origin = isset($param["SessionData"]['application'])? $param["SessionData"]['application'] : null;
-
-
-			if (isset($origin) && $origin != "dusers_admin" || $origin == null) {
-				$class = sprintf('Business\\Auth\\Action\\%s', $resource . 'Action');
-				$callable = new $class($this->container, $this->em);
-				return $callable($customRequest, $response);
 			}
 
 			$class = sprintf('App\\Auth\\Action\\%s', $resource . 'Action');

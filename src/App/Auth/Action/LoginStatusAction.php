@@ -62,9 +62,6 @@ class LoginStatusAction {
 	 *  {
 	 *      "userName": "teste@test.com",
 	 *      "sessionKey": "33mfjqhfj2if7opnla9sja8lc7",
-	 *      "SessionData": {
-	 *          "application": "dusers_admin"
-	 *      }
 	 * }
 	 *
 	 * @apiSuccess {String} json New JsonResponse.

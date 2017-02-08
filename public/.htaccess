@@ -1,6 +1,6 @@
 SetEnv "APP_ENV" "production"
 
-Header always set Access-Control-Allow-Origin "http://dcideusers-front.dev.intranet"
+Header always set Access-Control-Allow-Origin "*"
 Header always set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Access-Control-Allow-Origin"
 Header always set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
 

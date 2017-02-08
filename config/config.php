@@ -20,7 +20,6 @@ use Zend\Stdlib\Glob;
  *
  * Habilita Stacktrace da API
  *
- * @use Exceptions\DUsersExceptions
  */
 if(!defined('DEBUG')){
     define('DEBUG', true);

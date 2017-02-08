@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Dcide
+ * User: jhonatas
  * Date: 12/05/2016
  * Time: 16:08
  */
@@ -50,39 +50,25 @@ class LoginAction {
 		$this->em = $em;
 		$this->container = $container;
 		$this->authComponents = new AuthComponents($container);
-		$this->repository = $em->getRepository('App\Admin\Entity\UserUsers');
+		$this->repository = $em->getRepository('Business\Entities\Users');
 	}
 
 	/**
 	 * @api {post} /api/Auth/Login Login Admin
-	 * @apiName LoginAdmin
+	 * @apiName Login
 	 * @apiVersion 0.1.0
-	 * @apiGroup Auth Admin
+	 * @apiGroup Auth
 	 *
 	 * @apiParam {string} userName userName of the entry User.
 	 * @apiParam {string} password Password of the entry User.
-	 * @apiParam {string} application Product Name
 	 *
 	 * @apiParamExample {json} Request-Example:
 	 *  {
 	 *      "userName": "teste@test.com",
 	 *      "password": "P@ssw0rd",
-	 *      "SessionData": {
-	 *          "application" : "dusers_admin"
-	 *      }
 	 * }
 	 *
 	 * @apiSuccess {String} json New JsonResponse.
-	 *
-	 *
-	 * @apiSuccessExample Success-Response:
-	 *     HTTP/1.1 200 OK
-	 * {
-	 *      "userName": "jhonatas@dcide.com.br",
-	 *      "name": "Jhonatas",
-	 *      "email": "jhonatas@dcide.com.br",
-	 *      "sessionKey": "la5qcqk04rqbhq3tk3r8u8ckn1"
-	 * }
 	 *
 	 * @apiError UserNotFound The id of the User was not found.
 	 *

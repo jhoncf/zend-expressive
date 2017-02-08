@@ -26,18 +26,6 @@ return [
 			]
 		],
 		[
-			'name' => 'apiAdmin',
-			'path' => '/api/Admin/{resource:[a-zA-Z]+}[/{resourceId:' . $regex . '}[/{relation:[a-z]+}]]',
-			'middleware' => App\Admin\ApiAction::class,
-			'allowed_methods' => [
-				'GET',
-				'POST',
-				'PUT',
-				'PATCH',
-				'DELETE'
-			],
-		],
-		[
 			'name' => 'api',
 			'path' => '/api/{resource:[a-zA-Z]+}[/{resourceId:' . $regex . '}[/{relation:[a-z]+}]]',
 			'middleware' => App\Action\ApiAction::class,

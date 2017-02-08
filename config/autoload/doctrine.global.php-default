@@ -13,9 +13,9 @@ return [
     				'driver' => 'mysqli',
     				'host' => '127.0.0.1',
     				'port' => '3306',
-    				'user' => 'dusers_user',
-    				'password' => 'dusers_pass',
-    				'dbname' => 'dusers_db',
+    				'user' => 'user',
+    				'password' => 'user_pass',
+    				'dbname' => 'db',
     				'charset' => 'utf8'
     			]
     		],
@@ -27,17 +27,7 @@ return [
     		],
     		'config' => [
     			'entity_paths' => [
-    				'src/Business/Empresas/Entity',
-    				'src/Business/Planos/Entity',
-    				'src/Business/Produtos/Entity',
-    				'src/Business/Features/Entity',
-    				'src/Business/Usuarios/Entity',
-    				'src/Business/Perfis/Entity',
-    				'src/Business/Permissoes/Entity',
-    				'src/Business/Newsletter/Entity',
-    				'src/Business/UsuariosGrupos/Entity',
     				'src/Business/Entities',
-    				'src/App/Admin/Entity',
     			]
     		],
     		'cache' => [

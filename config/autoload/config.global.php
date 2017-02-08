@@ -11,17 +11,14 @@ return [
 		'salt' => 'Dinafon - grumpsy daisy 976'
 	],
 	'SMTPMailConfig' => [
-		'host' => 'mail.dcide.com.br',
-		'username' => 'denergia@dcide.com.br',
-		'password' => 'iG3&xd84',
+		'host' => 'mail.gmail.com',
+		'username' => 'mail@gmail.com',
+		'password' => 'pass',
 		'SMTPSecure' => 'tls',
 		'port' => 587,
 		'from' => [
-			'email' => 'denergia@dcide.com.br',
-			'name' => 'Dcide',
+			'email' => 'mail.gmail.com',
+			'name' => 'Email',
 		]
-	],
-	'Apps' => [
-		'PoolDenergiaUrl' => 'http://jhonatas.pool.vagrant/'
 	]
 ];

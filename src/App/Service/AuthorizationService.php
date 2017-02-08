@@ -30,7 +30,7 @@ class AuthorizationService {
 		$auth = $request->getHeader('authorization-key');
 		$server_params = $request->getServerParams();
 
-		if (strpos($server_params['REQUEST_URI'], "/api/Auth") !== false ||strpos($server_params['REQUEST_URI'], "/api/LoginStatus/UpdateStatus") !== false) {
+		if (strpos($server_params['REQUEST_URI'], "/api/Auth") !== false) {
 			return $next($request, $response);
 		}
 

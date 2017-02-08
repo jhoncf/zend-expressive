@@ -7,9 +7,5 @@
  */
 
 return [
-  'endpointList' =>[
-      '/api/DCompanies',
-      '/api/DBanks',
-      '/api/Dashboard',
-  ]
+  'endpointList' =>[]
 ];

@@ -17,8 +17,6 @@ return [
 
 			App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
 			App\Action\ApiAction::class => App\Action\ApiFactory::class,
-			App\Admin\ApiAction::class => App\Action\ApiFactory::class,
-
 			App\Service\AuthService::class => App\Service\ServiceFactory::class,
 		    App\Service\AuthorizationService::class => App\Service\ServiceFactory::class,
 		]

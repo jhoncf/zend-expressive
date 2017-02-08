@@ -28,7 +28,6 @@ class ApiAction {
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next = null) {
         $resource = $request->getAttribute('resource');
         $resourceId = $request->getAttribute('resourceId');
-        $type = $request->getAttribute('relation');
 
         if (!is_numeric($resourceId)) {
             $relation = $resourceId;

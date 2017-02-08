@@ -1,0 +1,4 @@
+.idea
+/public/apidoc
+/config/autoload/doctrine.global.php
+/vendor

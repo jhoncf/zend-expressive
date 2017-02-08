@@ -1,0 +1,50 @@
+{
+  "require": {
+    "php": "^5.5 || ^7.0",
+    "roave/security-advisories": "dev-master",
+    "zendframework/zend-expressive": "^1.0",
+    "zendframework/zend-expressive-helpers": "^2.0",
+    "zendframework/zend-expressive-fastroute": "^1.1",
+    "zendframework/zend-servicemanager": "^3.0",
+    "zendframework/zend-stdlib": "~2.7",
+    "zendframework/zend-stratigility": "^1.1",
+    "ocramius/proxy-manager": "^1.0",
+    "doctrine/orm": "^2.5",
+    "opis/session": "^3.1.0",
+    "filp/whoops": "^2.1",
+    "phpmailer/phpmailer": "~5.2",
+    "twig/twig": "~1.0"
+  },
+  "autoload": {
+    "psr-4": { "": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ZendTest\\Expressive\\": "test/"
+    }
+  },
+  "require-dev": {
+    "composer/composer": ">=1.0.0-alpha10",
+    "phpunit/phpunit": "^4.7",
+    "squizlabs/php_codesniffer": "^2.3"
+  },
+  "scripts": {
+    "check": [
+      "@cs",
+      "@test"
+    ],
+    "post-install-cmd": [
+      "apidoc -i src/Business/ -o public/apidoc"
+    ],
+    "post-update-cmd": [
+      "apidoc -i src/Business/ -o public/apidoc",
+      "./vendor/doctrine/orm/bin/doctrine orm:generate:proxies"
+    ],
+    "cs": "phpcs",
+    "cs-fix": "phpcbf",
+    "serve": "php -S 0.0.0.0:8086 -t public",
+    "test": "phpunit",
+    "apidocs": "apidoc -i src -o public/apidoc",
+    "generate-proxies": "./vendor/doctrine/orm/bin/doctrine orm:generate:proxies"
+  }
+}

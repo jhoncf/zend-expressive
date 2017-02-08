@@ -1,0 +1,50 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Dcide
+ * Date: 11/05/2016
+ * Time: 17:09
+ */
+
+return [
+    'doctrine' => [
+    		'connection' => [
+    			'orm_default' => [
+    				'driver' => 'mysqli',
+    				'host' => '127.0.0.1',
+    				'port' => '3306',
+    				'user' => 'dusers_user',
+    				'password' => 'dusers_pass',
+    				'dbname' => 'dusers_db',
+    				'charset' => 'utf8'
+    			]
+    		],
+    		'orm' => [
+    			'proxy_dir' => 'data/cache/EntityProxy',
+    			'proxy_namespace' => 'EntityProxy',
+    			'auto_generate_proxy_classes' => false,
+    			'underscore_naming_strategy' => false
+    		],
+    		'config' => [
+    			'entity_paths' => [
+    				'src/Business/Empresas/Entity',
+    				'src/Business/Planos/Entity',
+    				'src/Business/Produtos/Entity',
+    				'src/Business/Features/Entity',
+    				'src/Business/Usuarios/Entity',
+    				'src/Business/Perfis/Entity',
+    				'src/Business/Permissoes/Entity',
+    				'src/Business/Newsletter/Entity',
+    				'src/Business/UsuariosGrupos/Entity',
+    				'src/Business/Entities',
+    				'src/App/Admin/Entity',
+    			]
+    		],
+    		'cache' => [
+    			'redis' => [
+    				'host' => '127.0.0.1',
+    				'port' => '6379',
+    			]
+    		]
+    	]
+];

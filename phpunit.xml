@@ -18,7 +18,7 @@
          strict="false"
          verbose="false">
     <testsuites>
-        <testsuite name="FMB Api Testes">
+        <testsuite name="Api Testes">
             <directory>./test</directory>
         </testsuite>
     </testsuites>

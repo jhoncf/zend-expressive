@@ -45,6 +45,7 @@
     "serve": "php -S 0.0.0.0:8086 -t public",
     "test": "phpunit",
     "apidocs": "apidoc -i src -o public/apidoc",
+    "generate-tables": "./vendor/doctrine/orm/bin/doctrine orm:generate:proxies",
     "generate-proxies": "./vendor/doctrine/orm/bin/doctrine orm:generate:proxies"
   }
 }

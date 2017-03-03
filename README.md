@@ -1,5 +1,9 @@
 ## Projeto Api Zend Expressive
 
-### Configuração de Database;
+### ConfiguraÃ§Ã£o de Database;
 
-    config/autoload/doctrine.global.php-default
+    config/autoload/doctrine.global.php-default > config/autoload/doctrine.global.php
+
+### Criando as tabelas
+    
+    composer generate-tables

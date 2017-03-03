@@ -25,6 +25,14 @@ return [
 				'OPTIONS'
 			]
 		],
+        [
+            'name' => 'apiPosts',
+            'path' => '/api/{resource:Posts}',
+            'middleware' => App\Action\ApiAction::class,
+            'allowed_methods' => [
+                'GET'
+            ],
+        ],
 		[
 			'name' => 'api',
 			'path' => '/api/{resource:[a-zA-Z]+}[/{resourceId:' . $regex . '}[/{relation:[a-z]+}]]',

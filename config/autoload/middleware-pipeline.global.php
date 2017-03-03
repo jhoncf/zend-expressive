@@ -42,7 +42,7 @@ return [
 				// App\Helper\InputFilter::class,
 				// App\Service\AuthService::class,
 				//Helper\ServerUrlMiddleware::class,
-			    App\Service\AuthorizationService::class,
+			    //App\Service\AuthorizationService::class,
 			],
 			'priority' => 10000,
 		],

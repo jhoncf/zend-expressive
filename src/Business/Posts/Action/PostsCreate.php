@@ -1,21 +1,21 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: jhonatas
+ * Date: 16/02/17
+ * Time: 11:50
+ */
 
 namespace Business\Posts\Action;
 
+
 use App\Util\CustomRequest;
+use Business\Entities\Post;
 use Doctrine\ORM\EntityManager;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\JsonResponse;
 
-/**
- * Created by PhpStorm.
- * User: jhonatas
- * Date: 08/02/17
- * Time: 13:27
- */
-class PostsAction {
-
-
+class PostsCreate{
     /**
      * @var \Business\Entities\PostRepository
      */
@@ -75,7 +75,12 @@ class PostsAction {
      */
     public function __invoke(CustomRequest $request, ResponseInterface $response, callable $next = null) {
         try {
-            $companies = $this->repository->findAll();
+            $entity = new Post();
+            $entity->setTitle('Hue');
+            $entity->setContent('Huezera');
+            $entity->setCreatedAt(new \DateTime());
+
+            $companies = $this->repository->save($entity);
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
